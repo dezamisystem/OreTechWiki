@@ -1,0 +1,2 @@
+# OreTechWiki
+俺テックウィキ
