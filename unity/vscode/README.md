@@ -43,9 +43,9 @@ VSCode(VisualStudioCode)の情報
     "workbench.settings.useSplitJSON": true,
 ```
 
-- 署名のテンプレートを追加
+- 署名のテンプレートデータを```setting.json```に追加
 
-```setting.json```に以下を追加
+設定例
 
 ```json
     "psi-header.templates": [

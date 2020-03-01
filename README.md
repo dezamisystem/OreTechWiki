@@ -7,18 +7,10 @@
 ## 構成
 
 ```sh
+├── README.md
 ├── android
-│   ├── README.md
-│   └── androidstudio
-│       └── README.md
 ├── ios
-│   ├── README.md
-│   └── xcode
-│       └── README.md
 └── unity
-    ├── README.md
-    └── vscode
-        └── README.md
 ```
 
 ---
