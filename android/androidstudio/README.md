@@ -42,10 +42,10 @@ Copyright (c) $today.year 東亜プリン秘密研究所. All rights reserved.
 
 - Project枠が```Android```選択しているのを確認
 
-- ```app```上で右クリックして、```Update Copyright```を選択
+- 署名するファイルもしくはフォルダ上で右クリックして、```Update Copyright```を選択
 
 - 以下を確認
-  - 反映先が```Whole project```
+  - 反映先
   - ```Update existing copyrights```にチェックが入っている
 
 - ```OKボタン```で実行
