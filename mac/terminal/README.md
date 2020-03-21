@@ -50,6 +50,9 @@ export PATH="/usr/local/sbin:$PATH"
 [[ -d ~/.rbenv  ]] && \
   export PATH=${HOME}/.rbenv/bin:${PATH} && \
   eval "$(rbenv init -)"
+
+# for pyenv
+eval "$(pyenv init -)"
 ```
 
 - ターミナルの環境設定から一般タブを選択
