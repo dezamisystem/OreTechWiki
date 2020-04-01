@@ -1,5 +1,13 @@
 # Unity Test Framework
 
+## 前提条件
+
+### 確認したUnityバージョン
+
+```sh
+2019.2.21f1
+```
+
 ## 導入方法
 
 - Unityの```Package Manager```から以下をインポート
@@ -39,7 +47,8 @@ Test Framework
 <img src="unity006.png" width="200">
 
 - ```Test Runner```の```PlayMode```内のボタンから```Create Test Script in current folder```をクリック
-  - **警告！決して```Create PlayMode Test Assembly Folder```を選んではいけない！もし選んでしまったら…**
+  
+- **警告！決して```Create PlayMode Test Assembly Folder```を選んではいけない！もし選んでしまったら…**
 
 <img src="kibayasi01.jpg" width="800">
 
@@ -185,13 +194,13 @@ public void Init()
 
 ### Androidの場合
 
-- ```Run all in player (Android)```を押すとビルドからテスト実行まで自動でやってくれる
+- ```Run all in player (Android)```をクリックするとビルドからテスト実行まで自動でやってくれる
 
 - テストの結果は```Test Runner```上で確認できる
 
 ### iOSの場合
 
-- ```Run all in player (Android)```を押すと```Xcode```プロジェクトの出力まではやってくれる
+- ```Run all in player (iOS)```をクリックすると```Xcode```プロジェクトの出力まではやってくれる
 
 - ```Xcode```から```Run```すればテストが開始される
 
@@ -205,7 +214,7 @@ public void Init()
 
 ## テストは成功した、しかし…
 
-- **なぜ```Create PlayMode Test Assembly Folder```が動作してくれないのか？**
+### なぜ```Create PlayMode Test Assembly Folder```が動作してくれないのか？
 
 <img src="kibayasi02.jpg" width="800">
 
