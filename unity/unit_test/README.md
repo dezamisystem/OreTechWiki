@@ -68,103 +68,7 @@ Test Framework
 
 - テストスクリプトをエディタで開き、シナリオを書く
 
-<details><summary>テストスクリプト例</summary><div>
-
-```c#
-using System.Collections;
-using NUnit.Framework;
-using UnityEngine;
-using UnityEngine.UI;
-using UnityEngine.TestTools;
-using UnityEngine.SceneManagement;
-using TestProject;
-
-namespace Tests
-{
-    public class SampleTestScript
-    {
-        GameObject mainSceneObject;
-        GameObject debugButtonObject;
-
-        // Setup for test exec
-        [SetUp]
-        public void Init()
-        {
-            // Load a scene for test
-            SceneManager.LoadScene("MainScene");
-        }
-
-        // A UnityTest behaves like a coroutine in Play Mode. In Edit Mode you can use
-        // `yield return null;` to skip a frame.
-        [UnityTest]
-        public IEnumerator TestProjectOnButtonMethodTestScript()
-        {
-            // Use the Assert class to test conditions.
-            // Use yield to skip a frame.
-            if (mainSceneObject == null)
-            {
-                // Get a scene object of test target
-                mainSceneObject = GameObject.Find("GameObject_MainScene");
-            }
-            // Get a script class of test target
-            MainScene mainScene = mainSceneObject.GetComponentInChildren<MainScene>();
-            // Wait 2 seconds
-            yield return new WaitForSeconds(2f);
-            // Call a method of test target
-            mainScene.OnButton();
-            // Wait 2 seconds
-            yield return new WaitForSeconds(2f);
-            // Finish
-            yield return null;
-        }
-
-        [UnityTest]
-        public IEnumerator TestProjectButtonClickEventTestScript()
-        {
-            if (debugButtonObject == null)
-            {
-                // Get a scene Buttom of test target
-                debugButtonObject = GameObject.Find("Button_Test");
-            }
-            Button debugButton = debugButtonObject.GetComponent<Button>();
-            // Wait 2 seconds
-            yield return new WaitForSeconds(2f);
-            // Call onClick event of Button
-            debugButton.onClick.Invoke();
-            // Wait 2 seconds
-            yield return new WaitForSeconds(2f);
-            // Finish
-            yield return null;
-        }
-
-
-        [UnityTest]
-#if UNITY_ANDROID
-        [Ignore("BAN!")]
-#endif
-        public IEnumerator IgnoredTestScript01()
-        {
-            // Wait 12 seconds
-            yield return new WaitForSeconds(12f);
-            // Finish
-            yield return null;
-        }
-
-        [UnityTest]
-        [Timeout(5000)]
-        public IEnumerator TimeoutTestScript()
-        {
-            // Wait 12 seconds
-            yield return new WaitForSeconds(12f);
-            // Finish
-            yield return null;
-        }
-
-    }
-}
-```
-
-</div></details>
+[テストスクリプト例](SampleTestScript.cs)
 
 - ```Test Runner```にテストシナリオが反映されているのを確認
 
@@ -172,7 +76,13 @@ namespace Tests
 
 ### 注意点
 
-- シナリオから必ず対象の```Scene```を指定する
+- ```Assert```クラスはUnity標準を用いる
+
+```c#
+using Assert = UnityEngine.Assertions.Assert;
+```
+
+- テスト前に必ず対象の```Scene```を指定する
 
 ```C#
 // Setup for test exec
@@ -214,7 +124,7 @@ public void Init()
 
 ## テストは成功した、しかし…
 
-### なぜ```Create PlayMode Test Assembly Folder```が動作してくれないのか？
+### なぜ```Create PlayMode Test Assembly Folder```が正しく動作してくれないのか？
 
 <img src="kibayasi02.jpg" width="800">
 
