@@ -61,6 +61,13 @@ IDETemplateMacros.plist
 
 [Xcode Help](https://help.apple.com/xcode/mac/9.0/index.html?localePath=en.lproj#/dev7fe737ce0)
 
+
+## Archive
+
+### Target Device
+
+<img src="xcode_archive_device.jpg">
+
 ---
 
 Copyright (C) 2020 東亜プリン秘密研究所. All rights reserved.
